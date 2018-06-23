@@ -16,7 +16,9 @@ export default class Header extends Component {
                 <Row
                     className="main-title-loading-page"
                 >
-                  <Media>
+                  <Media
+                      href="/"
+                  >
                       <Media>
                           <Media
                               object

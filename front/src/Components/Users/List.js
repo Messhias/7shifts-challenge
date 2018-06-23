@@ -36,13 +36,14 @@ export default class List extends Component {
 
     render() {
         const {
-            data
+            data,
+            isDetail
         } = this.props;
 
 
         const options = {
             noDataText: "No users found.",
-            onRowClick: this.onRowClick
+            onRowClick: !isDetail ? this.onRowClick : null
         };
 
         if (data.length < 0) {
@@ -55,7 +56,7 @@ export default class List extends Component {
             >
                 <Row>
                     <BootstrapTable
-                        search
+                        search={isDetail ? true : false }
                         multiColumnSearch
                         searchPlaceholder='Search'
                         data={data}

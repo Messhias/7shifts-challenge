@@ -59,6 +59,7 @@ export default class UsersList extends Component {
 
         view =
             <List
+                isDetail={false}
                 data={users}
             />;
 
