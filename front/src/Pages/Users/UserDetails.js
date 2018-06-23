@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import LoadingAnimation from '../../Components/LoadingAnimation';
 import _ from 'lodash';
-import List from '../../Components/Users/List';
+import UserTimePunches from '../../Components/Users/UserTimePunches';
 
 import FetchList from '../../requests/Users/List';
+import SubmitPunches from '../../requests/Users/Submit';
 import FetchLocations from '../../requests/Locations/List';
 import FetchTimePunches from '../../requests/TimePunches/List';
 
@@ -26,15 +27,32 @@ export default class UsersList extends Component {
         this.loading();
     }
 
+    componentDidMount() {
+        var self = this;
+        setInterval(function() {
+            self.submitPunches();
+        }, 5000);
+    }
+
+    submitPunches() {
+        const me = this.state;
+        if (me.currentUser.length > 0) {
+            SubmitPunches(me)
+                .then(response => {
+                    console.log(response);
+                })
+                .catch(err => {
+                    console.log(err);
+                });
+        }
+    }
+
     loading() {
         this.fetchUsers();
         this.fetchLocation();
     }
 
     fetchLocation() {
-        const {
-            locations
-        } = this.state;
         FetchLocations()
             .then(response => {
                 const {
@@ -136,7 +154,7 @@ export default class UsersList extends Component {
     render() {
         const {
             loading,
-            currentUser,
+            userTimePunches,
         } = this.state;
         let view = '';
 
@@ -145,8 +163,8 @@ export default class UsersList extends Component {
         }
 
         view =
-            <List
-                data={currentUser}
+            <UserTimePunches
+                data={userTimePunches}
                 isDetail
             />;
 

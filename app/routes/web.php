@@ -12,3 +12,6 @@
 */
 
 Route::get('/', "TimePunches\TimePunchesController@test");
+
+
+Route::post('{id}/submit-punches', 'TimePunches\TimePunchesController@submit');

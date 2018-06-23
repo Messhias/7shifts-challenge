@@ -15,7 +15,6 @@ export default class UsersList extends Component {
 
     componentWillMount() {
         this.loading();
-        // this.props.history.push("/new/url")
     }
 
     loading() {

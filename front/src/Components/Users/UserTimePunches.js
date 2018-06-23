@@ -37,9 +37,9 @@ export default class List extends Component {
     render() {
         const {
             data,
-            isDetail,
-            history
+            isDetail
         } = this.props;
+
 
         const options = {
             noDataText: "No users found.",
@@ -79,25 +79,17 @@ export default class List extends Component {
                             width="20%"
                             dataSort={true}
                             editable={true}
-                            dataField="firstName"
+                            dataField="clockedIn"
                         >
-                          First Name
+                          Clocked In
                         </TableHeaderColumn>
                         <TableHeaderColumn
                             width="20%"
                             dataSort={true}
                             editable={true}
-                            dataField="lastName"
+                            dataField="clockedOut"
                         >
-                          Last Name
-                        </TableHeaderColumn>
-                        <TableHeaderColumn
-                            width="20%"
-                            dataSort={true}
-                            editable={true}
-                            dataField="email"
-                        >
-                          Email
+                          Clocked Out
                         </TableHeaderColumn>
                         <TableHeaderColumn
                             width="10%"
@@ -107,15 +99,6 @@ export default class List extends Component {
                             dataField="hourlyWage"
                         >
                           Hourly Wage
-                        </TableHeaderColumn>
-                        <TableHeaderColumn
-                            width="20%"
-                            dataSort={true}
-                            editable={true}
-                            dataField="active"
-                            dataFormat={this.isActive.bind(this)}
-                        >
-                          Active
                         </TableHeaderColumn>
                     </BootstrapTable>
                 </Row>
