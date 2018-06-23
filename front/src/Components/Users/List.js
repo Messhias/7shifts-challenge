@@ -37,8 +37,7 @@ export default class List extends Component {
     render() {
         const {
             data,
-            isDetail,
-            history
+            isDetail
         } = this.props;
 
         const options = {

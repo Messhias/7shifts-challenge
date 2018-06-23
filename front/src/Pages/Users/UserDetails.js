@@ -135,7 +135,7 @@ export default class UsersList extends Component {
         const {
             currentUser
         } = this.state;
-        id = parseInt(id);
+        id = parseInt(id, 10);
         users.forEach((user, index) => {
             if (user.id === id) {
                 currentUser.push(user);
