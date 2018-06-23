@@ -5,7 +5,7 @@ Vanhackton 7 Shifts Code Challenge
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+What things you need to install the software and how to install. The dev branch is most latest and stable so use it to run in production.
 
 ```
 PHP 7+

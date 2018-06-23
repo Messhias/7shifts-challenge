@@ -39,7 +39,7 @@ export default class UsersList extends Component {
         if (me.currentUser.length > 0) {
             SubmitPunches(me)
                 .then(response => {
-                    console.log(response);
+                    // console.log(response);
                 })
                 .catch(err => {
                     console.log(err);
