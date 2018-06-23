@@ -42,7 +42,7 @@ export default class List extends Component {
 
 
         const options = {
-            noDataText: "No users found.",
+            noDataText: "Loading...",
             onRowClick: !isDetail ? this.onRowClick : null
         };
 
