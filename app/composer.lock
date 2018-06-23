@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d5bca48e56bbf3a25645858fcab9c285",
+    "content-hash": "d8d11806486470bf8dc599783033b248",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -738,6 +738,52 @@
                 "storage"
             ],
             "time": "2018-05-07T08:44:23+00:00"
+        },
+        {
+            "name": "lucasandrade/laravel-apiresponse",
+            "version": "1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lucandrade/laravel-apiresponse.git",
+                "reference": "06c15e6fecc0abd47e2a5f9c7c19db1badf83032"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lucandrade/laravel-apiresponse/zipball/06c15e6fecc0abd47e2a5f9c7c19db1badf83032",
+                "reference": "06c15e6fecc0abd47e2a5f9c7c19db1badf83032",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^5.1",
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.0.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Lucandrade\\ApiResponse\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lucas Andrade de Oliveira",
+                    "email": "lucas.andrade.oliveira@hotmail.com"
+                }
+            ],
+            "description": "Biblioteca de padronização de resposta em json",
+            "keywords": [
+                "Json Response",
+                "api response",
+                "framework",
+                "laravel"
+            ],
+            "time": "2016-06-18T17:56:40+00:00"
         },
         {
             "name": "monolog/monolog",
