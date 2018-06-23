@@ -45,8 +45,9 @@ PS4 for PHP Laravel Application
 
 ## Prints
 
-![alt text](https://raw.github.com/messhias/7shits-challenge/master/src/imgs/print2.png)
-![alt text](https://raw.github.com/messhias/7shits-challenge/master/src/imgs/print.png)
+![Screenshot](print.png)
+![Screenshot](print2.png)
+
 
 
 ## Acknowledgments
