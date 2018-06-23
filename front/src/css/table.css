@@ -1,0 +1,9 @@
+.table-header {
+    margin-bottom: 0;
+    border-bottom: none!important;
+}
+.table-header > thead > tr > th {
+    border-bottom: none!important;
+}
+td.buttons .btn { margin-bottom: 0; }
+tr.middle td, td.middle { vertical-align: middle!important; }

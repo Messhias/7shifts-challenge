@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,500,700");
+.content-pricing .widgets-container { padding: 10px!important; }
+
+table.table-pricing > thead > tr > th,
+table.table-pricing > tbody > tr > td,
+table.table-pricing th,
+table.table-pricing td {
+    font-size: 12px;
+    vertical-align: middle!important;
+    color: #333!important;
+}
+table.table-pricing .text-dark { color:#333; }
+table.table-pricing td:not(.no-padding) { padding: 3px!important; }
+table.table-pricing th { padding: 8px 3px!important; }
+table.table-pricing th.no-padding { padding: 0!important; }
+table.table-pricing th.padding-vertical,
+table.table-pricing td.padding-vertical {
+    padding-top: 8px!important;
+    padding-bottom: 9px!important;
+}
+table.table-pricing th.padding-vertical-tarifas,
+table.table-pricing td.padding-vertical-tarifas {
+    padding: 3px 0!important;
+}
+table.table-pricing-header {
+    margin-bottom: 0;
+    margin-top: 10px;
+    z-index: 1050;
+    position: relative;
+}
+table.table-pricing-header tr th { background-color: white; }
+tr.header { background-color: #f5f5f5; }
+td .badge { margin-left: 5px; }
+.table.no-border { background: none; margin: 0; }
+.table.no-margin { margin: 0; }
+.table.no-border>tbody>tr>td,
+.table.no-border>tbody>tr>th,
+.table.no-border>tfoot>tr>td,
+.table.no-border>tfoot>tr>th,
+.table.no-border>thead>tr>td,
+.table.no-border>thead>tr>th { border: none; padding: 0!important; }
+
+.table tr.highlight {
+    background-color: #dff0d8!important;
+}
+.table tr.opened td {
+    background-color: #666!important;
+    color: white!important;
+}
+.table tr.opened td span.text-danger { color: white!important; }
+
+.table td.buttons .btn:not(:first-child) { margin-left: 5px; }
+.table-tarifas {
+    margin: 0;
+    border: none!important;
+    background-color: transparent!important;
+}
+.table-tarifas > tbody > tr > td { border-bottom: 0; text-align: center; }
+.table-tarifas > tbody > tr:first-child > td { border-top: none; }
+.table-tarifas > tbody > tr > td:first-child { border-left: none; }
+.table-tarifas > tbody > tr > td:last-child { border-right: none; }
+td.hover .badge, tr.hover .badge {
+    margin-left: 0;
+    margin-right: 3px;
+}
+.table-tarifas > tbody > tr > td.danger {
+    background-color: #f2dede!important;
+    color: #666!important;
+}
+td.hover .badge i, tr.hover .badge i { vertical-align: middle; }
+th.td-tarifas,
+td.td-tarifas {
+    border-left-width: 3px!important;
+}
+.table-tarifas > tbody > tr > td.text-red { color: red!important; }
+.table-tarifas > tbody > tr > td.fid-error,
+.table-tarifas > tbody > tr > td.relation-error,
+.table-tarifas > tbody > tr > td.for-sale { position: relative }
+.table-tarifas > tbody > tr > td.fid-error::after {
+    position: absolute;
+    z-index: 1042;
+    content: '';
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 10px 0;
+    border-color: transparent #ed6b75 transparent transparent;
+}
+.table-tarifas > tbody > tr > td.relation-error span::before {
+    position: absolute;
+    z-index: 1041;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0 0;
+    border-color: #8e44ad transparent transparent transparent;
+}
+.table-tarifas > tbody > tr > td.for-sale::before {
+    position: absolute;
+    z-index: 1040;
+    content: '';
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 10px 10px;
+    border-color: transparent transparent #4cae4c transparent;
+}
+.font-11 {
+    font-size: 11.5px!important;
+}
+.product-badges { display: block; }
+.badge-green { background-color: #4cae4c; }
+input.min {
+    padding: 4px;
+    height: 24px;
+    width: 60px;
+    margin: 0 auto;
+    font-size: 14px;
+    text-align: center;
+    color: #676a6c;
+}
+input.error.min { color: red; }
+.widget.widget-stats { padding: 6px; }
+.widget-stats .stats-number { font-size: 18px; margin-bottom: 5px; }
+.widget-stats .stats-title { font-size: 16px; font-weight: bold}
+.widget-stats .stats-progress { margin-bottom: 7px; }
+.widget-stats .stats-number .desc { display: block; font-size: 15px; position: relative; }
+.widget-stats .stats-number .d {
+    font-size: 12px;
+    color: rgba(255, 255, 255, .6);
+    margin-right: 3px;
+}
+.widget-stats .stats-number .desc .goal { margin-left: 5px; font-size: 14px; position: absolute; right: 0; }
+.widget-stats .stats-number .desc .goal.green { color: green; }
+.widget-stats .stats-number .desc .goal.red { color: red; }
+.widget-stats .stats-icon { width: 32px; height: 32px; line-height: 32px; }
+.widget-stats .stats-icon.stats-icon-lg { top: 6px; right: 6px; font-size: 28px; }
+th.linked { padding: 6px 6px 0 6px!important; }
+th.linked .form-check {
+    display: inline-block;
+    margin: 0 0 0 5px!important;
+    padding: 0;
+    float: right;
+}
+
+th.linked .form-check div[class*="icheckbox_"] {
+    margin: 0 0 0 5px!important;
+}
+
+.page-pricing {
+    padding-left: 0!important;
+    padding-right: 0!important;
+}
+
+.page-pricing .wrapper-content {
+    padding: 0 0 40px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.page-pricing .page-heading {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.page-pricing .pagination {
+    margin: 0;
+    vertical-align: middle;
+}
+
+.info {
+    width: 100%;
+    display: block;
+    float: left;
+    padding-bottom: 10px;
+    background-color: #f3f3f4;
+    z-index: 1050;
+    position: relative;
+}
+
+.info-fixed {
+    position: fixed;
+}
+
+.filter-preview {
+    padding: 10px;
+    padding-left: 20px;
+    color: rgb(128, 130, 131);
+    background-color: rgb(213, 213, 213);
+    font-family: "Roboto";
+    font-weight: 300;
+}
+
+.filter-preview b {
+    color: rgb(84, 87, 89);
+    font-weight: bold;
+}
+
+.filter-preview .icon {
+    padding: 10px;
+    font-size: 13px;
+}
+
+.filter-preview .btn-filter {
+    background-color: rgb(84, 87, 89);
+    color: white;
+}
+
+.filter-preview .filter-desc:first-child {
+    padding-left: 0;
+}
+
+.filter-desc {
+    display: inline-block;
+    font-size: 11px;
+    padding: 0 10px;
+    border-right: solid 1px rgb(159, 159, 159);
+}
+
+.filter-desc b {
+    font-size: 13px;
+}
+
+.filter-counter {
+    display: inline-block;
+    margin-left: 5px;
+    vertical-align: top;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.filter-form {
+    padding: 10px 20px;
+    background-color: white;
+}
+
+.pricing-legend { display: inline-block; }
+.linked-container {
+    float: right;
+    line-height: 15px;
+}
+.linked-container input {
+    margin: 0 5px 0 0;
+    vertical-align: sub;
+    width: 15px;
+    height: 15px;
+}
+.popover{
+    max-width: 40%; /* Max Width of the popover (depending on the container!) */
+}
+.filter-add-btnset {
+    padding-top: 5px;
+}
+.select-brand-popover{
+  padding-top: 10px;
+}

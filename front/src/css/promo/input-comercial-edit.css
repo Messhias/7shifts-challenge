@@ -1,0 +1,402 @@
+.inp-com-edit {
+    border: solid 1px rgb(210, 210, 210);
+    border-radius: 2px!important;
+    font-family: helvetica;
+    color: black;
+}
+
+.inp-com-edit .cluster-details {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.inp-com-edit .cluster-inputs {
+    flex: 18;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.inp-com-edit .section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.inp-com-edit .section-lock {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+}
+
+.inp-com-edit .section>div {
+    padding: 10px 15px;
+    line-height: 30px;
+}
+
+.area {
+    flex: 2;
+    border-right: solid 1px rgb(210, 210, 210);
+    font-weight: bolder;
+    font-size: 16px;
+    vertical-align: middle;
+    color: black;
+}
+
+.area small {
+    font-weight: normal;
+}
+
+.inp-com-edit .section .description {
+    flex: 4;
+    border-right: solid 1px rgb(210, 210, 210);
+}
+
+.inp-com-edit .section .cluster-details-input {
+    border-top: 1px solid #d2d2d2;
+    flex: 1;
+}
+
+.inp-com-edit .section .cluster-details-input:not(:first-child) {
+    border-left: 1px solid #d2d2d2;
+}
+
+.inp-com-edit .section .cluster-details-input input {
+    border: none;
+    font: normal 18px helvetica;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.inp-com-edit .section .cluster-details-input input:disabled {
+    opacity: 0.5;
+}
+
+.inp-com-edit .section .cluster-details-input input:focus {
+    outline: none;
+}
+
+.inp-com-edit .section .precification-options {
+    flex: 6;
+    padding: 10px;
+}
+
+.inp-com-edit .section .description input::placeholder,
+.inp-com-edit .section .description textarea::placeholder {
+    opacity: 0.6;
+}
+
+.inp-com-edit .section .precification-options label {
+    line-height: 20px;
+    margin: 0;
+    margin-left: 15px;
+    vertical-align: middle;
+    font-weight: normal;
+}
+
+.inp-com-edit .section .precification-options label.medias {
+    font-weight: bold!important;
+}
+
+.inp-com-edit .section .precification-options label:hover {
+    cursor: pointer;
+}
+
+.inp-com-edit .section .precification-options label:first-child {
+    margin-left: 0;
+}
+
+.inp-com-edit .section .precification-options label input {
+    margin: 0;
+    vertical-align: text-top;
+    margin-right: 5px;
+}
+
+.inp-com-edit .cluster-details .lock-clusters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FBBC05;
+    color: #e35b5a;
+    padding: 0;
+}
+
+.inp-com-edit .cluster-details .lock-clusters:hover {
+    cursor: pointer;
+}
+
+.inp-com-edit .cluster-details .lock-clusters .lock-icon {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inp-com-edit .cluster-details .lock-clusters .lock-icon span {
+    display: block;
+}
+
+.inp-com-edit .cluster-details .lock-clusters .lock-icon .fa {
+    margin-top: 20px;
+}
+
+.inp-com-edit .cluster-details .lock-clusters .btn-group {
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+}
+
+.inp-com-edit .cluster-details .lock-clusters .btn-group .btn {
+    margin: 0;
+    border-bottom: none;
+}
+
+.inp-com-edit .cluster-details .lock-clusters .btn-group .btn:last-child {
+    border-right: none;
+    border-left: none;
+}
+
+.inp-com-edit .section .products-container {
+    flex: 3;
+    border-left: solid 1px rgb(210, 210, 210);
+}
+
+.inp-com-edit .section .products-container h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.inp-com-edit .section .products-container h3 .lock {
+    font-weight: bold;
+    color: black;
+}
+
+.inp-com-edit .section .products-container h3 .lock i {
+    font-size: 16px;
+    vertical-align: text-top;
+}
+
+.inp-com-edit .section .products-container h3 .lock span {
+    text-decoration: underline;
+    line-height: 20px;
+}
+
+.inp-com-edit .section .products-container .input-search {
+    position: relative;
+}
+
+.inp-com-edit .section .products-container .input-search input {
+    position: relative;
+    width: 100%;
+    padding-left: 35px;
+    border-radius: 3px!important;
+    border: solid 1px rgb(210, 210, 210);
+    font-size: 16px;
+    z-index: 100;
+    color: rgb(100, 100, 100);
+}
+
+.inp-com-edit .section .products-container .input-search input:focus {
+    outline: none;
+}
+
+.inp-com-edit .section .products-container .input-search .search-products {
+    position: absolute;
+    width: 100%;
+    max-height: 250px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: none;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background: white;
+    border: solid 1px rgb(210, 210, 210);
+    border-top: none;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.inp-com-edit .section .products-container .input-search .search-products.active {
+    display: block;
+}
+
+.inp-com-edit .section .products-container .input-search .search-products li {
+    padding: 5px 10px;
+    color: rgb(120, 120, 120);
+    opacity: .7;
+    vertical-align: middle;
+}
+
+.inp-com-edit .section .products-container .input-search .search-products li:not(:last-child) {
+    border-bottom: solid 1px rgb(210, 210, 210);
+}
+
+.inp-com-edit .section .products-container .input-search .search-products li:not(.loading):hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.inp-com-edit .section .products-container .input-search .search-products li .badge {
+    vertical-align: text-bottom;
+}
+
+.inp-com-edit .section .products-container .input-search::before {
+    content: "\f002";
+    position: absolute;
+    left: 5;
+    z-index: 200;
+    font-family: FontAwesome;
+    font-size: 18px;
+    color: rgb(180, 180, 180);
+    line-height: 35px;
+    width: 40px;
+    text-align: center;
+}
+
+.inp-com-edit .table-products-container {
+    margin: 15px 10px 0;
+}
+
+.inp-com-edit .table-products {
+    width: 100%;
+}
+
+.inp-com-edit .table-products thead th {
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: solid 1px rgb(210, 210, 210);
+}
+
+.inp-com-edit .table-products td,
+.inp-com-edit .table-products th {
+    padding: 5px;
+}
+
+.inp-com-edit .table-products tbody tr:nth-child(even) {
+    background: rgb(240, 240, 240);
+}
+
+.inp-com-edit .table-products tbody tr td {
+    vertical-align: middle;
+    color: rgb(120, 120, 120);
+}
+
+.inp-com-edit .table-products .price-column {
+    text-align: right;
+    padding-right: 7px;
+}
+
+.inp-com-edit .table-products .input-price {
+    max-width: 50px;
+    padding: 5px;
+    border-radius: 3px!important;
+    border: solid 1px rgb(210, 210, 210);
+    color: rgb(100, 100, 100);
+    line-height: 15px;
+    vertical-align: super;
+}
+
+.inp-com-edit .table-products .input-price:focus {
+    outline: none;
+}
+
+.inp-com-edit .table-products label {
+    font-weight: normal;
+    color: rgb(160, 160, 160);
+}
+
+.inp-com-edit .table-products label .input-price {
+    margin-left: 3px;
+}
+
+.inp-com-edit .table-products .package-discount {
+    display: inline-block;
+    color: red;
+    font-size: 11px;
+    line-height: 12px;
+    margin-right: 5px;
+}
+
+.inp-com-edit .section .precification-container {
+    flex: 1;
+    padding: 0;
+    position: relative;
+    padding-top: 35px;
+}
+
+.inp-com-edit .section .precification-container .send-container {
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+
+.inp-com-edit .section .precification-container .send-container button {
+    margin: 0;
+}
+
+.inp-com-edit .section .precification-container .send-container .btn-send {
+    background-color: #e35b5a;
+    border: 1px solid #e35b5a;
+    color: #770100;
+    font-weight: bold;
+}
+.inp-com-edit .section .precification-container .send-container .btn-send2 {
+    background-color: #FBBC05;
+    border: 1px solid #FBBC05;
+    color: #e35b5a;
+    font-weight: bold;
+}
+.inp-com-edit .section .precification-container .precification-tab {
+    border-bottom: solid 1px rgb(210, 210, 210);
+    padding: 10px;
+    opacity: 0.6;
+    /* background-color: #f3f3f4; */
+    background-color: #cccccc;
+    min-height: 90px;
+}
+.inp-com-edit .section .precification-container .precification-tab:not(.active):hover {
+    cursor: pointer;
+}
+
+.inp-com-edit .section .precification-container .precification-tab.active {
+    opacity: 1;
+    background-color: white;
+}
+
+.inp-com-edit .section .precification-container .precification-tab .title {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.inp-com-edit .section .precification-container .precification-tab .title i {
+    margin-right: 5px;
+    vertical-align: text-top;
+}
+
+.inp-com-edit .section .precification-container .precification-tab .fields {
+    margin-top: 10px;
+}
+
+.inp-com-edit .section .precification-container .precification-tab .package-switch {
+    float: right;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: right;
+}
+
+.inp-com-edit .section .precification-container .precification-tab .package-switch .btn-group {
+    margin-left: 10px;
+    padding: 0;
+}
+
+.inp-com-edit .section .precification-container .precification-tab .package-switch .btn-group .btn {
+    padding: 2px 14px;
+}

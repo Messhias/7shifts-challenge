@@ -1,0 +1,51 @@
+.hover:hover { cursor: pointer; }
+.header-button { display: inline; margin-right: 5px; }
+.modal-footer .btn { margin-bottom: 0; }
+.faded { opacity: .7 }
+.margin-left-5 { margin-left: 5px; }
+.margin-right-5 { margin-right: 5px; }
+.page-header.navbar .page-logo .logo-default { margin-top: 10px }
+
+.modal.show { display: block!important; }
+
+.modal.show { opacity: 1!important; }
+.modal-backdrop { opacity: .1!important;}
+.modal-dialog {margin: 120px auto !important;}
+.relations-products-add {height: 1300px !important;}
+.relations-set .form-group {margin-bottom: 0px; text-align: left;}
+.relations-set .col-lg-6 {margin: 0px;padding:0px;}
+.relations-set .form-group input {margin-top: -18px;font-size: 11px;line-height: 20px;}
+.relations-set .form-control {height: 23px !important;line-height: 20px;}
+.relations-set .Select-input {font-size: 11px; height: 20px;line-height: 20px;}
+.relations-set .Select-control {font-size: 11px; height: 20px;line-height: 20px;}
+.relations-set .Select-value {font-size: 11px; height: 20px!important; line-height: 20px!important;}
+.relations-set .Select-value-label {line-height: 25px !important;}
+.table-history {width: 650px;}
+.price-competitor-check .form-check {margin-top: 0px!important; margin-bottom: -25px!important;}
+.price-competitor-check .margin-checkbox {margin-top: 0px!important; margin-bottom: -25px!important;}
+.popover {max-width: 60%!important;}
+.table-history .input-group {text-align: center!important;}
+.pointer {cursor: pointer;}
+
+.tooltip-big { width: 400px; }
+.tooltip-big .tooltip-divisor { margin: 5px 0!important; padding: 0!important; }
+.tooltip-inner.tooltip-left { text-align: left; }
+.no-border { border: none!important; }
+.no-padding { padding: 0!important; }
+.no-margin { margin: 0!important; }
+.inline-block { display: inline-block; }
+.hover:hover { cursor: pointer; }
+.header-button { display: inline; margin-right: 5px; }
+.modal-footer .btn { margin-bottom: 0; }
+.faded { opacity: .7 }
+.opacy { opacity: .5 }
+.top0 { margin-top: 0; padding-top: 0; }
+.margin-left-2 { margin-left: 2px; }
+.margin-left-5 { margin-left: 5px; }
+.margin-left-20 { margin-left: 20px; }
+.margin-right-2 { margin-right: 2px; }
+.margin-right-5 { margin-right: 5px; }
+.margin-right-20 { margin-right: 20px; }
+.page-header.navbar .page-logo .logo-default { margin-top: 10px }
+.fa.show { display: inline-block!important; }
+.inline { display: inline; }

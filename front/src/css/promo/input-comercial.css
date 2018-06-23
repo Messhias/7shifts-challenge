@@ -1,0 +1,375 @@
+.inp-com-preview {
+	border: solid 1px rgb(210, 210, 210);
+	border-radius: 2px!important;
+}
+
+.inp-com-b-bottom {
+	border-bottom: solid 1px rgb(210, 210, 210);
+}
+
+.inp-com-p {
+	padding: 12px;
+}
+
+.inp-com-gray {
+	color: rgb(165, 165, 165);
+}
+
+.inp-com-preview h4 {
+	display: inline-block;
+	margin: 0;
+	margin-right: 5px;
+	font: bold 15px helvetica;
+	color: black;
+}
+
+.inp-com-preview .inp-row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+.inp-com-preview .inp-column {
+	flex: 1;
+}
+
+.inp-com-preview .area {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+.inp-com-preview .area.active {
+	opacity: 1;
+}
+
+.inp-com-preview .area+.area {
+	border-top: solid 1px rgb(210, 210, 210);
+}
+
+.inp-com-preview .area .arrow {
+	flex: 1;
+}
+
+.inp-com-preview .area .values {
+	flex: 12;
+	padding: 18px 12px;
+}
+
+.inp-com-preview .area .arrow {
+	display: flex;
+	flex-direction: row;
+	align-content: space-around;
+	align-items: center;
+	flex: 1;
+	border: solid 1px rgb(210, 210, 210);
+	border-top: none;
+	border-bottom: none;
+}
+
+.inp-com-preview .area .arrow i {
+	width: 100%;
+	text-align: center;
+	font-size: 16px;
+}
+
+.inp-com-preview .area .values h2 {
+	margin: 0 0 15px;
+	font: bold 21px helvetica;
+	color: black;
+}
+
+.inp-com-preview .clusters {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+.inp-com-preview .cluster {
+	flex-grow: 1;
+}
+.inp-com-preview .cluster span { display: block; }
+.inp-com-preview .cluster .amount+.amount { margin-top: 10px; }
+.inp-com-preview .cluster .subtitle {
+	display: block;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+	font-size: 14px;
+	border-bottom: solid 1px rgb(210, 210, 210);
+	min-height: 46px;
+}
+
+.inp-com-preview .cluster .subarea {
+	font-size: 12px;
+	color: rgb(165, 165, 165);
+}
+
+.inp-com-preview .cluster .number {
+	color: black;
+	font: bold 13px helvetica;
+}
+
+.inp-com-preview .mask.green {
+	background-color: rgb(187, 227, 192);
+	color: rgb(109, 154, 117);
+	border-color: transparent;
+}
+
+.inp-com-preview .mask.green .title {
+	background-color: rgb(219, 239, 220);
+	border-right-color: transparent;
+}
+
+.inp-com-preview .mask.red {
+	background-color: rgb(254, 210, 210);
+	color: rgb(205, 105, 105);
+	border-color: transparent;
+}
+
+.inp-com-preview .mask.red .title {
+	background-color: rgb(255, 227, 227);
+	border-right-color: transparent;
+}
+
+.inp-com-preview .mask.blue {
+	background-color: rgb(168, 225, 235);
+	color: rgb(82, 121, 123);
+	border-color: transparent;
+}
+
+.inp-com-preview .mask.blue .title {
+	background-color: rgb(209, 239, 244);
+	border-right-color: transparent;
+}
+
+.inp-com-preview .mask {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	margin: 10px;
+	border-radius: 5px!important;
+	border: solid 1px rgb(210, 210, 210);
+}
+
+.inp-com-preview .mask .title {
+	flex: 1;
+	/* max-width: 50px; */
+	width: 100%;
+	text-align: center;
+	border-top-left-radius: 5px!important;
+	border-bottom-left-radius: 5px!important;
+	display: flex;
+	justify-content: center;
+	border-right: solid 1px rgb(210, 210, 210);
+}
+
+.inp-com-preview .mask .title span {
+	writing-mode: tb-rl;
+	font-weight: bold;
+}
+
+.inp-com-preview .mask .slots {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	flex: 10;
+}
+
+.inp-com-preview .mask .slots > div {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	flex: 1;
+}
+
+.inp-com-preview .mask .slots > div .slot {
+	flex: 1;
+	position: relative;
+	border: solid 1px rgb(167, 207, 172);
+	border-bottom-color: transparent;
+	border-left-color: transparent;
+	padding: 10px 0;
+	opacity: .7;
+	margin-bottom: 15px;
+}
+
+.inp-com-preview .mask .slots > div:first-child .slot {
+	border-top-color: transparent;
+	border-left-color: transparent;
+}
+
+.inp-com-preview .mask .slots > div .slot.inactive {
+	background-color: rgb(210, 210, 210);
+}
+
+.inp-com-preview .mask .slots > div .slot.blocked {
+	opacity: .5;
+}
+
+.inp-com-preview .mask .slots > div .slot:not(.inactive):hover {
+	opacity: 1;
+	cursor: pointer;
+}
+
+.inp-com-preview .mask .slots > div .slot .slot-featured {
+	position: absolute;
+	right: 10px;
+	top: 5px;
+	z-index: 2000;
+	font-size: 16px;
+}
+
+.inp-com-preview .mask .slots > div .slot .slot-featured.active {
+	color: yellow;
+}
+
+.inp-com-preview .mask .slots > div .slot:last-child {
+	border-right-color: transparent;
+}
+
+.inp-com-preview .mask .slots > div .slot .slot-text {
+	text-align: center;
+}
+
+.inp-com-preview .mask .slots > div .slot .slot-text-category {
+		text-align: center;
+		margin-bottom: 10px;
+    margin-left: 10px;
+    height: auto !important;
+}
+
+.inp-com-preview .mask .slots > div .slot .slot-text i {
+	font-size: 30px;
+}
+
+.inp-com-preview .mask .slots > div .slot .slot-text .clusters {
+	display: block;
+    font-size: 12px;
+    text-align: left !important;
+	margin-left: 10px;
+	height: auto;
+}
+.inp-com-preview .mask .slots > div .slot .slot-text .clusters > div > span {
+	font-weight: bolder !important;
+	font: bold 13px helvetica!important;
+}
+
+.commercial-input-observations {
+	margin-bottom: 40px;
+}
+
+.padding-observations {
+	padding: 20px;
+}
+
+.btn-edit-observations {
+	float: right;
+	padding: 8px;
+}
+
+.summary h3 {
+	color: #e35b5a;
+	font: bold 30px helvetica!important;
+}
+
+.summary h4 {
+    color: #FBBC05;
+    font: bold 18px helvetica!important;
+}
+
+.informations-fixed-on-top {
+	position: fixed;
+	top: 46px;
+	width: 100%;
+	background: yellow;
+	left: 55px;
+	z-index: 9;
+	text-align: center;
+}
+
+.informations-fixed-on-top h3 {
+  padding: 10px;
+}
+
+.workflow-step {
+    min-height: 300px;
+}
+
+.events {
+    width: 100%;
+}
+
+
+.right-menu-mask-area {
+  background: #f9f9f9;
+  text-align: center;
+	padding: 15px;
+}
+
+.right-menu-mask-area ul {
+	margin-top: 20px;
+	padding: 0;
+  color: #c7c7c7;
+  width: 100%;
+	display: inline-table;
+}
+
+.right-menu-mask-area ul li{
+	list-style: none;
+	margin-bottom: 10px;
+	cursor: pointer;
+  padding: 10px;
+	display: inline
+}
+
+.right-menu-mask-area ul li.active{
+	background: #f0f0f0;
+	border-radius: 5px !important;
+}
+
+.right-menu-mask-area ul li:hover{
+	background: #f0f0f0;
+	border-radius: 5px !important;
+}
+
+.hidden {
+	display: none !important;
+}
+
+.margin-slot-icon-fix {
+	margin-top: 10%;
+}
+
+.inp-com-preview .mask .slots > div .slot .slot-star {
+	position: absolute;
+	bottom: 0;
+	right: 10px;
+	margin: 0;
+	color: yellow;
+	font-size: 1.3em;
+	font-weight: bolder;
+}
+
+
+.mask-download {
+	padding: 20px;
+	height: 100% !important;
+	width: 100% !important;
+	position: relative;
+	top: 0;
+	padding:100px;
+}
+
+.hide {
+	display: none !important;
+}
+
+.show-mask {
+    display: flex !important;
+}
+
+.active-input-menu {
+    background: black;
+    color: white;
+	margin-left: 5px;
+}

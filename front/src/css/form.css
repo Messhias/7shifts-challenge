@@ -1,0 +1,14 @@
+.form-check { margin-bottom: 15px; }
+.Select-menu-outer { z-index: 999; }
+.margin-checkbox { margin-top: 25px; }
+.btn-file input[type="file"] { display: none; }
+input.unbordered {
+	border: none;
+}
+input.unbordered:focus {
+	outline: none;
+}
+input.unbordered::-webkit-input-placeholder {
+	font-style: italic;
+	opacity: .7;
+}
