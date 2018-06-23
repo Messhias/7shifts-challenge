@@ -32,7 +32,6 @@ class TimePunchesController extends BaseController
     {
         try {
             $data = new PunchesClass($request->input('data'));
-            Log:info($data->weeklyReport());
             ApiResponse::setAsSuccess()->setPayload($data->weeklyReport());
         } catch (\Exception $e) {
             $message = "Error";
