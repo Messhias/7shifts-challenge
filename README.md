@@ -1,4 +1,4 @@
-# 7shits-challenge
+# 7Shifts-challenge
 
 Vanhackton 7 Shifts Code Challenge
 
