@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import LoadingAnimation from '../../Components/LoadingAnimation';
 import _ from 'lodash';
 import UserTimePunches from '../../Components/Users/UserTimePunches';
+import Menu from '../../Components/Home/Menu';
+import { Container } from 'reactstrap';
 
 import FetchList from '../../requests/Users/List';
 import SubmitPunches from '../../requests/Users/Submit';
@@ -162,11 +164,15 @@ export default class UsersList extends Component {
             view = <LoadingAnimation />
         }
 
-        view =
-            <UserTimePunches
-                data={userTimePunches}
-                isDetail
-            />;
+        view =(
+            <Container>
+                <Menu />
+                <UserTimePunches
+                    data={userTimePunches}
+                    isDetail
+                />
+            </Container>
+        );
 
         return view;
 

@@ -14,3 +14,12 @@
 .mg-tp-60 {
    margin-top: 60px;
 }
+
+.center {
+    margin: 0 auto !important;
+    text-align: center;
+}
+
+.links-spaces {
+   margin-left: 20px;
+}

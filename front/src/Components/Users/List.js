@@ -31,7 +31,7 @@ export default class List extends Component {
     }
 
     changePage(id) {
-        window.location = `user/details/${id}`;
+        this.props.history.push(`user/details/${id}`);
     }
 
     render() {
@@ -114,7 +114,7 @@ export default class List extends Component {
                             dataField="active"
                             dataFormat={this.isActive.bind(this)}
                         >
-                          Active
+                          Status
                         </TableHeaderColumn>
                     </BootstrapTable>
                 </Row>

@@ -3,10 +3,11 @@ import './App.css';
 import MainApp from './Main/App';
 
 class App extends Component {
-
   render() {
     return (
-        <MainApp />
+        <MainApp
+          history={this.props.history}
+        />
     );
   }
 }

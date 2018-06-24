@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
-import FetchList from '../../requests/Users/List';
-import LoadingAnimation from '../../Components/LoadingAnimation';
 import _ from 'lodash';
+import { Container } from 'reactstrap';
+
 import List from '../../Components/Users/List';
+import LoadingAnimation from '../../Components/LoadingAnimation';
+import Menu from '../../Components/Home/Menu';
+
+import FetchList from '../../requests/Users/List';
 
 export default class UsersList extends Component {
     constructor(props){
@@ -56,11 +60,16 @@ export default class UsersList extends Component {
             view = <LoadingAnimation />
         }
 
-        view =
-            <List
-                isDetail={false}
-                data={users}
-            />;
+        view =(
+            <Container>
+                <Menu />
+                <List
+                    isDetail={false}
+                    data={users}
+                    {...this.props}
+                />
+            </Container>
+        );
 
         return view;
 

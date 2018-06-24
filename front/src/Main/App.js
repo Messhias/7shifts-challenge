@@ -34,7 +34,9 @@ export default class App extends Component {
         view = (
             <div>
                 <Header />
-                <Routes />
+                <Routes
+                    history={this.props.history}
+                />
             </div>
         );
 

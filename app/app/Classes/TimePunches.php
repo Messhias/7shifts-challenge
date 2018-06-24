@@ -43,5 +43,4 @@ class TimePunches
 
         return $this->workingDays;
     }
-
 }
