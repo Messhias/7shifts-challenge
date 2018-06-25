@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import LoadingAnimation from '../../Components/LoadingAnimation';
 import _ from 'lodash';
+import { Container, Row } from 'reactstrap';
+
 import UserTimePunches from '../../Components/Users/UserTimePunches';
 import Menu from '../../Components/Home/Menu';
-import { Container } from 'reactstrap';
+import Chart from '../../Components/Chart';
 
 import FetchList from '../../requests/Users/List';
 import SubmitPunches from '../../requests/Users/Submit';
@@ -14,6 +16,7 @@ export default class UsersList extends Component {
     constructor(props){
     	super(props);
     	this.state = {
+            id: props.match.params && props.match.params.id ? props.match.params.id : false,
             loading: true,
             users: [],
             currentUser: [],
@@ -21,7 +24,7 @@ export default class UsersList extends Component {
             locations: [],
             timePunches: [],
             userTimePunches: [],
-            id: props.match.params && props.match.params.id ? props.match.params.id : false
+            data: []
         };
     }
 
@@ -29,19 +32,21 @@ export default class UsersList extends Component {
         this.loading();
     }
 
-    componentDidMount() {
-        var self = this;
-        setInterval(function() {
-            self.submitPunches();
-        }, 5000);
-    }
-
     submitPunches() {
         const me = this.state;
         if (me.currentUser.length > 0) {
             SubmitPunches(me)
                 .then(response => {
-                    // console.log(response);
+                    const {
+                        data
+                    } = response;
+
+                    if (data.status) {
+                        this.setState({
+                            loading: false,
+                            data: data.payload
+                        });
+                    }
                 })
                 .catch(err => {
                     console.log(err);
@@ -51,7 +56,6 @@ export default class UsersList extends Component {
 
     loading() {
         this.fetchUsers();
-        this.fetchLocation();
     }
 
     fetchLocation() {
@@ -75,9 +79,11 @@ export default class UsersList extends Component {
         const {
             currentUser
         } = this.state;
-        if (currentUser[0].locationId === location.id) {
-            this.setState({ userLocation: location });
-            this.fetchTimePunches(currentUser);
+        if (currentUser[0] !== undefined) {
+            if (currentUser[0].locationId === location.id) {
+                this.setState({ userLocation: location });
+                this.fetchTimePunches(currentUser);
+            }
         }
     }
 
@@ -110,6 +116,7 @@ export default class UsersList extends Component {
             }
         });
         this.setState({ userTimePunches });
+        this.submitPunches();
     }
 
     fetchUsers() {
@@ -144,33 +151,52 @@ export default class UsersList extends Component {
             }
         });
         this.setState({ currentUser });
-    }
-
-    afterLoading() {
-        var self = this;
-        setInterval(function() {
-            self.setState({ loading: false });
-        }, 5000);
+        this.fetchLocation();
     }
 
     render() {
         const {
             loading,
             userTimePunches,
+            data
         } = this.state;
+        const {
+            week,
+            payment
+        } = data;
         let view = '';
 
         if (loading) {
-            view = <LoadingAnimation />
+            view = <LoadingAnimation />;
         }
 
         view =(
             <Container>
-                <Menu />
-                <UserTimePunches
-                    data={userTimePunches}
-                    isDetail
-                />
+                <Row>
+                    <Menu />
+                </Row>
+                <Row>
+                    <UserTimePunches
+                        data={userTimePunches}
+                        isDetail
+                    />
+                </Row>
+                <Row>
+                    <p>
+                        Week hours: {week != undefined ? week.weekHours : 0} hrs
+                    </p>
+                    <p>
+                        Week overtime hours: {week != undefined ? week.overtime : 0} hrs
+                    </p>
+                </Row>
+                <Row>
+                    <p>
+                        Week payment: $ {payment != undefined ? payment.weekPayment : 0}
+                    </p>
+                    <p>
+                        Week overtime payment: $ {payment != undefined ? payment.weekOvertimePayment : 0}
+                    </p>
+                </Row>
             </Container>
         );
 

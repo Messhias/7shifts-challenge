@@ -4,10 +4,13 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
+    "fusioncharts": "^3.12.2",
     "lodash": "^4.17.10",
+    "npm": "^6.1.0",
     "react": "^16.4.1",
     "react-bootstrap-table": "^4.3.1",
     "react-dom": "^16.4.1",
+    "react-fusioncharts": "^1.0.5",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
     "reactstrap": "^6.1.0"

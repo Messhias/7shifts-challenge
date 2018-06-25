@@ -3,12 +3,13 @@ import {
   BootstrapTable,
   TableHeaderColumn
 } from 'react-bootstrap-table';
-import { Container, Row } from 'reactstrap';
+import { Container, Row, Media } from 'reactstrap';
 import Loading from '../LoadingAnimation';
 
 export default class List extends Component {
     constructor(props){
     	super(props);
+      this.userPhoto = this.userPhoto.bind(this);
       this.onRowClick = this.onRowClick.bind(this);
     }
 
@@ -22,6 +23,20 @@ export default class List extends Component {
 
     hourlyFormat(cell, row) {
         return `$ ${row.hourlyWage}`;
+    }
+
+    userPhoto(cell, row)
+    {
+        return (
+          <Media>
+             <Media>
+               <Media
+                 src={`${row.photo}`} alt={`${row.firstName} photo's`}
+                 className='img-reponse rounded-photo max-height-80'
+                />
+             </Media>
+          </Media>
+        );
     }
 
     onRowClick(row) {
@@ -54,6 +69,11 @@ export default class List extends Component {
               className="mg-tp-60"
             >
                 <Row>
+                  <p>
+                    Click in the row to see the user's reports.
+                  </p>
+                </Row>
+                <Row>
                     <BootstrapTable
                         search={isDetail ? true : false }
                         multiColumnSearch
@@ -73,6 +93,15 @@ export default class List extends Component {
                             dataField="id"
                         >
                             #
+                        </TableHeaderColumn>
+                        <TableHeaderColumn
+                            width="20%"
+                            dataSort={true}
+                            editable={true}
+                            dataField="photo"
+                            dataFormat={this.userPhoto.bind(this)}
+                        >
+                          Photo
                         </TableHeaderColumn>
                         <TableHeaderColumn
                             width="20%"

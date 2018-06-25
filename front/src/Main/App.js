@@ -12,17 +12,6 @@ export default class App extends Component {
 
     }
 
-    componentWillMount() {
-        this.loading();
-    }
-
-    loading() {
-        var self = this;
-        setInterval(function() {
-            self.setState({ loading: false });
-        }, 5000);
-    }
-
     render() {
         const {
             loading
@@ -35,7 +24,7 @@ export default class App extends Component {
             <div>
                 <Header />
                 <Routes
-                    history={this.props.history}
+                    {...this.props}
                 />
             </div>
         );

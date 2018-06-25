@@ -36,7 +36,6 @@ class Dates
 
         $result = date('oW', $firstDate) === date('oW', $secondDate) && date('Y', $firstDate) === date('Y', $secondDate);
 
-
         return $result;
     }
 

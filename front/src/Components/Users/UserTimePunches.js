@@ -25,13 +25,6 @@ export default class List extends Component {
     }
 
     onRowClick(row) {
-        if (row.id) {
-            this.changePage(row.id);
-        }
-    }
-
-    changePage(id) {
-        window.location = `user/details/${id}`;
     }
 
     render() {
@@ -42,8 +35,7 @@ export default class List extends Component {
 
 
         const options = {
-            noDataText: "Loading...",
-            onRowClick: !isDetail ? this.onRowClick : null
+            noDataText: "Loading..."
         };
 
         if (data.length < 0) {

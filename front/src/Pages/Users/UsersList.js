@@ -21,6 +21,10 @@ export default class UsersList extends Component {
         this.loading();
     }
 
+    componentDidMount() {
+        this.setState({ loading: false });
+    }
+
     loading() {
         const {
             users
@@ -35,18 +39,10 @@ export default class UsersList extends Component {
                     _.each(_.values(data)[0], d => users.push(d));
                     this.setState({ users });
                 }
-                this.afterLoading();
             })
             .catch(err => {
                 console.log(err);
             });
-    }
-
-    afterLoading() {
-        var self = this;
-        setInterval(function() {
-            self.setState({ loading: false });
-        }, 5000);
     }
 
     render() {
@@ -63,6 +59,11 @@ export default class UsersList extends Component {
         view =(
             <Container>
                 <Menu />
+                <Container>
+                    <h3>
+                        Click on a row to see the user details
+                    </h3>
+                </Container>
                 <List
                     isDetail={false}
                     data={users}
