@@ -8,20 +8,28 @@ Charts(FusionCharts);
 export default class Chart extends Component {
     constructor(props){
     	super(props);
-    	this.state = {
-            data: []
-        };
     }
 
-
-
     render() {
-        const { data } = this.state;
+        const {
+            data,
+            title,
+            numberPrefix,
+            subCaption
+        } = this.props;
+        const myDataSource = {
+          chart: {
+            caption: title,
+            subCaption: subCaption,
+            numberPrefix: numberPrefix,
+          },
+          data
+        };
         const chartConfigs = {
             type: 'pie3d',
             dataFormat: 'json',
             width: '100%',
-            dataSource: data,
+            dataSource: myDataSource,
         };
         return (
             <ReactFC {...chartConfigs} />

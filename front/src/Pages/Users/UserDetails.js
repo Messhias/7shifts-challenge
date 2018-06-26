@@ -4,6 +4,7 @@ import _ from 'lodash';
 import { Container, Row } from 'reactstrap';
 
 import UserTimePunches from '../../Components/Users/UserTimePunches';
+import MinimalReport from '../../Components/Users/MinimalReport';
 import Menu from '../../Components/Home/Menu';
 import Chart from '../../Components/Chart';
 
@@ -160,11 +161,33 @@ export default class UsersList extends Component {
             userTimePunches,
             data
         } = this.state;
+        let view = '';
+
         const {
             week,
             payment
         } = data;
-        let view = '';
+        let timeChartData = [
+            {
+                label: 'Week hours',
+                value: week !== undefined ? week.weekHours : 0
+            },
+            {
+                label: 'Weekly overtime',
+                value: week !== undefined ? week.overtime : 0
+            },
+        ];
+
+        let paymentChartData = [
+            {
+                label: 'Week payment',
+                value: payment !== undefined ? payment.weekPayment : 0
+            },
+            {
+                label: 'Overtime payment',
+                value: payment !== undefined ? payment.weekOvertimePayment : 0
+            }
+        ]
 
         if (loading) {
             view = <LoadingAnimation />;
@@ -182,20 +205,25 @@ export default class UsersList extends Component {
                     />
                 </Row>
                 <Row>
-                    <p>
-                        Week hours: {week != undefined ? week.weekHours : 0} hrs
-                    </p>
-                    <p>
-                        Week overtime hours: {week != undefined ? week.overtime : 0} hrs
-                    </p>
+                    <MinimalReport
+                        {...data}
+                    />
                 </Row>
                 <Row>
-                    <p>
-                        Week payment: $ {payment != undefined ? payment.weekPayment : 0}
-                    </p>
-                    <p>
-                        Week overtime payment: $ {payment != undefined ? payment.weekOvertimePayment : 0}
-                    </p>
+                    <Chart
+                        data={timeChartData}
+                        title='Week hours / overtime'
+                        subCaption='User detials week overtime'
+                        numberPrefix=''
+                    />
+                </Row>
+                <Row>
+                    <Chart
+                        data={paymentChartData}
+                        title='Week payments / overtime'
+                        subCaption='User detials week overtime'
+                        numberPrefix='$'
+                    />
                 </Row>
             </Container>
         );
