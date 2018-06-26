@@ -59,8 +59,8 @@ class DailyOvertimeThreshold
         }
 
         return [
-            'weekHours' =>  $weekHours,
-            'overtime'  =>  $this->overtime
+            'weekHours' =>  round($weekHours,2),
+            'overtime'  =>  round($this->overtime, 2)
         ];
     }
 }

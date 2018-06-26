@@ -46,8 +46,8 @@ class WageCalculate
         $overtimePayment        = $overTimeHours * $overtimeHourWage;
 
         return [
-            'weekPayment' => $payHours,
-            'weekOvertimePayment' => $overtimePayment
+            'weekPayment' => round($payHours, 2),
+            'weekOvertimePayment' => round($overtimePayment, 2)
         ];
     }
 }

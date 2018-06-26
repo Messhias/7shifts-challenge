@@ -47,8 +47,12 @@ PS4 for PHP Laravel Application
 
 ![Screenshot](print.png)
 ![Screenshot](print2.png)
-
-
+![Screenshot](print3.png)
+![Screenshot](print4.png)
+![Screenshot](print5.png)
+![Screenshot](print6.png)
+![Screenshot](print7.png)
+![Screenshot](print8.png)
 
 ## Acknowledgments
 
